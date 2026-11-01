@@ -221,6 +221,7 @@ COPY public.worlds (id, name, scene_id) FROM stdin;
 96	Dobot Pick And Place World	87
 97	Dobot Suction Cup Pick And Place World	88
 98	myAGV mechArm Warehouse Delivery	89
+102	Pick And Place Sorting World	94
 \.
 
 --
@@ -306,6 +307,7 @@ COPY public.worlds_robots (id, world_id, robot_id, poses) FROM stdin;
 74	96	53	{{0.0,0.0,0.131305,0.0,0.0,0.0}}
 75	97	54	{{0.0,0.0,0.131305,0.0,0.0,0.0}}
 76	98	55	{{1.0,0.0,0.01,0.0,0.0,0.0}}
+80	102	1	{{0.0,0.0,0.9,0.0,0.0,0.0}}
 \.
 
 --
@@ -365,6 +367,7 @@ COPY public.scenes (id, name, launch_file_path, tools_config, ros_version, type,
 88	Dobot Suction Cup Pick And Place	/opt/jderobot/Launchers/dobot_suction_cup_pick_place.launch.py	{"rviz":"/opt/jderobot/Launchers/rviz/dobot_suction_cup_pick_place_harmonic.launch.py"}	ROS2	gz	dobot_pick_place.urdf
 89	Warehouse Delivery	/opt/jderobot/Launchers/warehouse_delivery.launch.py	{"gzsim":"/opt/jderobot/Launchers/visualization/warehouse_delivery.config"}	ROS2	gz	warehouse_delivery.urdf
 90	XLeRobot Warehouse	/opt/jderobot/Launchers/xlerobot_warehouse.launch.py	{"gzsim":"/opt/jderobot/Launchers/visualization/xlerobot_warehouse.config"}	ROS2	gz	xlerobot_warehouse.urdf
+94	Pick And Place Sorting	/opt/jderobot/Launchers/pick_place_sorting.launch.py	{"rviz":"/opt/jderobot/Launchers/rviz/pick_place_sorting_harmonic.launch.py"}	ROS2	gz	pick_place_sorting.urdf
 \.
 
 --
